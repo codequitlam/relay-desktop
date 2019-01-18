@@ -9,8 +9,9 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
-  // and load the index.html of the app.
-  mainWindow.loadFile('view/index.html')
+  // TODO: Determine whether a bluetooth connection is active and valid
+  // and load the main.html of the app or pair.html.
+  mainWindow.loadFile('view/main.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
