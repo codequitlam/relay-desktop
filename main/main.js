@@ -4,6 +4,7 @@ const { app, BrowserWindow } = require('electron')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+let bluetoothConn
 
 function createWindow () {
   // Create the browser window.
@@ -11,7 +12,8 @@ function createWindow () {
 
   // TODO: Determine whether a bluetooth connection is active and valid
   // and load the main.html of the app or pair.html.
-  mainWindow.loadFile('view/main.html')
+  if (!bluetoothConn) mainWindow.loadFile('view/pair.html')
+  else mainWindow.loadFile('view/main.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

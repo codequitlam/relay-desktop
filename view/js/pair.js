@@ -6,8 +6,13 @@ const electron = require('electron');
 const ipcRenderer = electron.ipcRenderer;
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('searchDevices').onclick = (e) => {
+
+  document.getElementById('pairPhone').onclick = (e) => {
     e.preventDefault()
-    console.log('PAIR CLICKED')
+    findDevices()
+  }
+
+  function findDevices() {
+    // Do bluetooth stuff
   }
 })
